@@ -1,15 +1,16 @@
 #ifndef CONFIGFILEFINDER_H
 #define CONFIGFILEFINDER_H
 
-class ConfigFileFinder : public Qdir
+#include <QString>
+#include <QStringList>
+
+class ConfigFileFinder
 {
-    Q_OBJECT
 public:
-    explicit ConfigFileFinder(QObject *parent = 0);
-    
-signals:
-    
-public slots:
+    explicit ConfigFileFinder();
+    QStringList getFiles();
+private:
+    QStringList files;
     
 };
 

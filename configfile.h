@@ -1,18 +1,21 @@
 #ifndef CONFIGFILE_H
 #define CONFIGFILE_H
 
-#include <QFile>
+#include <QString>
+#include <QList>
+#include "configoption.h"
 
-class ConfigFile : public QFile
+class ConfigFile
 {
-    Q_OBJECT
 public:
-    explicit ConfigFile(QObject *parent = 0);
-    
-signals:
-    
-public slots:
-    
+    ConfigFile(QString path);
+    void readOptions();
+    void print();
+
+private:
+    QList<ConfigOption> options;
+    QString title;
+    QString path;
 };
 
 #endif // CONFIGFILE_H
