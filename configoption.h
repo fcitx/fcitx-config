@@ -12,6 +12,7 @@ public:
     void setKey(QString key);
     void setValue(QString value);
     void appendDesc(QString desc);
+    QString dump();
 private:
     QString key;
     QString value;

@@ -11,6 +11,8 @@ public:
     ConfigFile(QString path);
     void readOptions();
     void print();
+    QString dump();
+    void save();
 
 private:
     QList<ConfigOption> options;

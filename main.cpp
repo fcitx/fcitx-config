@@ -26,6 +26,8 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 
     ConfigFile f(QDir::homePath() + "/.config/fcitx/conf/fcitx-chttrans.config");
     f.readOptions();
+    qDebug() << f.dump();
+    //f.save();
 
 
 

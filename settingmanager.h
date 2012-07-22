@@ -1,6 +1,7 @@
 #ifndef SETTINGMANAGER_H
 #define SETTINGMANAGER_H
 #include <QList>
+#include <configfile.h>
 
 class SettingManager
 {
