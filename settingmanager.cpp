@@ -1,4 +1,5 @@
 #include "settingmanager.h"
+#include "configfilefinder.h"
 
 /*
  * display configoption
@@ -8,4 +9,5 @@
 
 SettingManager::SettingManager()
 {
+    ConfigFileFinder c;
 }

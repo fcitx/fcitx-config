@@ -1,16 +1,16 @@
 #ifndef CONFIGFILEFINDER_H
 #define CONFIGFILEFINDER_H
 
-#include <QString>
-#include <QStringList>
+#include <QList>
+#include <configfile.h>
 
 class ConfigFileFinder
 {
 public:
     explicit ConfigFileFinder();
-    QStringList getFiles();
+    QList<ConfigFile> getFiles();
 private:
-    QStringList files;
+    QList<ConfigFile> files;
     
 };
 

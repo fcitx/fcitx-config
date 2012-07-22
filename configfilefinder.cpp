@@ -1,6 +1,8 @@
 #include "configfilefinder.h"
 #include <QDir>
 #include <QDebug>
+#include <configfile.h>
+#include <QStringList>
 
 /*
  * find a list of config file for current user
@@ -10,10 +12,14 @@
 ConfigFileFinder::ConfigFileFinder()
 {
     QDir dir(QDir::homePath() + "/.config/fcitx/conf");
-    //qDebug() << QDir::homePath().toStdString() + "/.config/fcitx/conf";
-    this->files = dir.entryList(QDir::Files );
+    QStringList files = dir.entryList(QDir::Files);
+    for (int i = 0; i< files.length(); i++) {
+        ConfigFile c (QDir::homePath() + "/.config/fcitx/conf/" + files[i]);
+        this->files.append(c);
+        //qDebug() << c.dump();
+    }
 }
 
-QStringList ConfigFileFinder::getFiles() {
+QList<ConfigFile> ConfigFileFinder::getFiles() {
     return this->files;
 }

@@ -15,8 +15,7 @@
 ConfigFile::ConfigFile(QString path)
 {
     this->path = path;
-
-
+    this->readOptions();
 }
 
 void ConfigFile::print() {
