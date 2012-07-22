@@ -1,7 +1,6 @@
 #include "configfilefinder.h"
 #include <QDir>
-#include <iostream>
-using namespace std;
+#include <QDebug>
 
 /*
  * find a list of config file for current user
@@ -11,7 +10,7 @@ using namespace std;
 ConfigFileFinder::ConfigFileFinder()
 {
     QDir dir(QDir::homePath() + "/.config/fcitx/conf");
-    cout << QDir::homePath().toStdString() + "/.config/fcitx/conf" << endl;
+    //qDebug() << QDir::homePath().toStdString() + "/.config/fcitx/conf";
     this->files = dir.entryList(QDir::Files );
 }
 
