@@ -19,6 +19,14 @@ void ConfigOption::print() {
     qDebug();
 }
 
+QString ConfigOption::getKey() {
+    return this->key;
+}
+
+QString ConfigOption::getValue() {
+    return this->value;
+}
+
 void ConfigOption::setKey(QString key) {
     this->key = key;
 }

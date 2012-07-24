@@ -85,3 +85,13 @@ void ConfigFile::readOptions()
 
 
 }
+
+void ConfigFile::setOption(QString key, QString newValue) {
+    for(int i = 0; i < this->options.length(); i++) {
+        if (this->options[i].getKey() == key) {
+            this->options[i].setValue(newValue);
+            return;
+        }
+    }
+    qDebug() << "no such key";
+}

@@ -11,3 +11,9 @@ SettingManager::SettingManager()
 {
     ConfigFileFinder c;
 }
+
+
+QString SettingManager::test()
+{
+    return "hello";
+}
